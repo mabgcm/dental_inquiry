@@ -1,0 +1,36 @@
+
+
+
+h2 {
+    padding: 20px;
+}
+form {
+    padding: 10px;
+    width: 90%;
+    margin: auto;
+    /* border: 1px solid black; */
+}
+form div {
+    padding-bottom: 10px;
+}
+form div label {
+    font-weight: 500;
+}
+.instruct {
+    text-align:left;
+    margin-left: 80px ;
+    margin-right: 80px;
+    font-size: larger;
+    font-weight: 700;
+}
+.question {
+    margin-left: 20px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: large;
+    font-weight: 500;
+    
+}
+fieldset div {
+    justify-content: space-between;
+}

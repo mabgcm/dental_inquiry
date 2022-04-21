@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Form</title>
+    <link rel="stylesheet" href="form.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h2 class="text-center">Free Dental Consultation Form</h2>
+    <br />
+    <p class="instruct">
+      Thanks for your interest on our Free Dental Consultation. For your safety
+      and to help planing the correct treatment we would appreciate if you could
+      provide the answers to the following questions.
+    </p>
+    <form action="result.html" method="get">
+<!-- FORM LINE 1 -->
+      <fieldset>
+        <legend>Personal Information</legend>
+        <div class="row g-3">
+          <!-- FIRST NAME -->
+          <div class="col-md-3">
+            <label for="FirstNAme">First Name</label>
+            <input
+              type="text"
+              name="FirstName"
+              id="FirstName"
+              class="form-control"
+              placeholder="Enter your first name"
+            />
+          </div>
+          <!-- LAST NAME -->
+          <div class="col-md-3">
+            <label for="LastNAme">Last Name</label>
+            <input
+              type="text"
+              name="LastName"
+              id="LastName"
+              class="form-control"
+              placeholder="Enter your last name"
+            />
+          </div>
+          <!-- GENDER -->
+          <div class="col-md-2.5">
+            <div>
+              <label for="">Gender</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                type="radio"
+                name="gender"
+                id="gender"
+                value="male"
+                class="form-check-input"
+              />
+              <label class="form-check-label" for="gender">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                type="radio"
+                name="gender"
+                id="gender"
+                value="female"
+                class="form-check-input"
+              />
+              <label class="form-check-label" for="gender">Female</label>
+            </div>
+          </div>
+          <!-- DATE OF BIRTH -->
+          <div class="col-md-2.5">
+            <label for="BirthDate">Date of Birth</label>
+            <input
+              type="date"
+              name="BirthDate"
+              id="BirthDate"
+              class="form-control"
+            />
+          </div>
+        </div>
+      </fieldset>
+<!-- FORM LINE 2 -->
+      <fieldset>
+        <legend>Your Current Dental Condition</legend>
+        <div class="row g-3">
+          <div class="col-md-7">
+            <div class="mb-1">
+              <label for="formFile" class="form-label"
+                >Please provide if you have a dental x-ray (panoramic) taken in
+                the last 6 months.</label
+              >
+              <input class="form-control" type="file" name="xray" id="formFile" />
+            </div>
+          </div>
+        </div>        
+        <div class="row g-3">
+          <p class="question">To prepare a suitable treatment plan and quote for you, we require <a href="./smiles.jpeg">some images of varying angles and positions</a> of the teeth and bite. <br> This will allow for a full visual assessment from the dental team.</p> 
+          <div class="col-md-3">
+            <div class="mb-1">
+              <label for="formFile" class="form-label"
+                >Visible closed smile</label
+              >
+              <input class="form-control" type="file" name="VisibleClosedSmile" id="formFile" />
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="mb-1">
+              <label for="formFile" class="form-label"
+                >Visible open smile</label
+              >
+              <input class="form-control" type="file" name="VisibleOpenSmile" id="formFile" />
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="mb-1">
+              <label for="formFile" class="form-label"
+                >Back upper focus</label
+              >
+              <input class="form-control" type="file" name="BackUpperFocus" id="formFile" />
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="mb-1">
+              <label for="formFile" class="form-label"
+                >Back lower focus</label
+              >
+              <input class="form-control" type="file" name="BackLowerFocus" id="formFile" />
+            </div>
+          </div>
+        </div>
+        <hr>
+  <!-- FORM LINE 3 -->
+        <!-- MEDICAL CONDITION -->
+        <div class="row g-3">
+          <div class="col-md-5">
+            <div>
+              <label for="medical"
+                >Do you suffer from any chronic illness or any medical
+                condition?</label
+              >
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                name="MedicalCondition"
+                id="medical"
+                value="No"
+                class="form-check-input"
+              />
+              <label class="form-check-label" for="medical">No</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                name="MedicalCondition"
+                id="medical"
+                value="Yes"
+                class="form-check-input"
+              />
+              <label class="form-check-label" for="medical">Yes</label>
+  
+              <input
+                type="text"
+                name="MedicalCondition"
+                id="medical"
+                placeholder="Please specify"
+              />
+            </div>
+          </div>
+          <!-- MEDICATION -->
+          <div class="col-md-4">
+            <div>
+              <label for="medication"
+                >Do you take any medication, blood thinners or Asprin?</label
+              >
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                name="Medication"
+                id="medication"
+                value="No"
+                class="form-check-input"
+              />
+              <label class="form-check-label" for="medication">No</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                name="Medication"
+                id="medication"
+                value="Yes"
+                class="form-check-input"
+              />
+              <label class="form-check-label" for="medication">Yes</label>
+  
+              <input
+                type="text"
+                name="Medication"
+                id="medication"
+                placeholder="Please specify"
+              />
+            </div>
+          </div>
+          <!-- ALLERGY -->
+          <div class="col-md-3">
+            <div>
+              <label for="allergy">Do you suffer from allergies?</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                name="Allergy"
+                id="allergy"
+                value="No"
+                class="form-check-input"
+              />
+              <label class="form-check-label" for="allergy">No</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                name="Allergy"
+                id="allergy"
+                value="Yes"
+                class="form-check-input"
+              />
+              <label class="form-check-label" for="allergy">Yes</label>
+  
+              <input
+                type="text"
+                name="Allergy"
+                id="allergy"
+                placeholder="Please specify"
+              />
+            </div>
+          </div>
+        </div>
+        <hr>
+  <!-- FORM LINE 4 -->
+        <!-- ORAL PAIN -->
+        <div class="row g-3">
+          <div class="col-md-3">
+            <div>
+              <label for="oral">Do you suffer from any oral pain?</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                name="OralPain"
+                id="oral"
+                value="No"
+                class="form-check-input"
+              />
+              <label class="form-check-label" for="oral">No</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                name="OralPain"
+                id="oral"
+                value="Yes"
+                class="form-check-input"
+              />
+              <label class="form-check-label" for="oral">Yes</label>
+  
+              <input
+                type="text"
+                name="OralPain"
+                id="oral"
+                placeholder="Please specify"
+              />
+            </div>
+          </div>
+          <!-- GUM DISEASE -->
+          <div class="col-md-4">
+            <div>
+              <label for="gum"
+                >Do you suffer from any bleeding and/or gum disease?</label
+              >
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                name="GumDisease"
+                id="gum"
+                value="No"
+                class="form-check-input"
+              />
+              <label class="form-check-label" for="gum">No</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                name="GumDisease"
+                id="gum"
+                value="Yes"
+                class="form-check-input"
+              />
+              <label class="form-check-label" for="gum">Yes</label>
+  
+              <input
+                type="text"
+                name="GumDisease"
+                id="gum"
+                placeholder="Please specify"
+              />
+            </div>
+          </div>
+          <!-- TEETH MOVE -->
+          <div class="col-md-5">
+            <div>
+              <label for="teeth"
+                >Do any of your teeth move when pressure is applied?</label
+              >
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                name="TeethMove"
+                id="teeth"
+                value="No"
+                class="form-check-input"
+              />
+              <label class="form-check-label" for="teeth">No</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                name="TeethMove"
+                id="teeth"
+                value="Yes"
+                class="form-check-input"
+              />
+              <label class="form-check-label" for="teeth">Yes</label>
+  
+              <input
+                type="text"
+                name="TeethMove"
+                id="teeth"
+                placeholder="Please specify the tooth"
+              />
+              <a
+                href="https://aneskey.com/wp-content/uploads/2016/08/B9780323079099000490_f49-05-9780323079099.jpg"
+                target="_blank"
+                >Click to see teeth number</a
+              >
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <div>
+        <fieldset>
+          <legend>Your Habits</legend>
+<!-- FORM LINE 5 -->
+          <!-- SMOKING -->
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="smoking"
+                    >Do you smoke?</label
+                  >
+                </div>
+                <select class="custom-select" id="smoking" name="SmokingHabit">
+                  <option selected>Choose...</option>
+                  <option value="Non-smoker">No</option>
+                  <option value="Social">On occasion</option>
+                  <option value="Smoker">Less than a pack a day</option>
+                  <option value="Heavy smoker">More than a pack a day</option>
+                </select>
+              </div>
+            </div>
+            <!-- DENTIST -->
+            <div class="col-md-6">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="dentist"
+                    >How often do you go to dentist?</label
+                  >
+                </div>
+                <select class="custom-select" id="dentst" name="DentistVisit">
+                  <option selected>Choose...</option>
+                  <option value="Twice a year">Twice a year</option>
+                  <option value="Every year">Once in a year</option>
+                  <option value="Once in 2 years">Once in 2 years</option>
+                  <option value="Less than 2 years">Once in 5 years</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      <div>
+        <fieldset>
+          <legend>Your Dental Inquiry</legend>
+<!-- FORM LINE 6 -->
+          <!-- DENTAL INQUIRY -->
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="Treatment"
+                >Is your inquiry for:</label
+              >
+            </div>
+            <select class="custom-select" id="inquiry" name="Treatment">
+              <option selected>Choose...</option>
+              <option value="Functional">
+                Functional treatments (such as implants, bridges, extractions,
+                functional crowns, etc)
+              </option>
+              <option value="Cosmetic">
+                Cosmetic treatments (where you have healthy teeth but would like
+                to enhance their appearance through treatments such as cosmetic
+                veneers or crowns).
+              </option>
+              <option value="Both">A mixture of both.</option>
+            </select>
+          </div>
+        </fieldset>
+      </div>
+
+      <br /><br />
+      <input class="btn btn-success" type="submit" value="Send the Form" />
+      <input class="btn btn-danger" type="reset" value="Reset the Form" />
+    </form>
+  </body>
+</html>
